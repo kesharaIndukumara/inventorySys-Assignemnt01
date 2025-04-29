@@ -16,31 +16,25 @@ public class InventoryRemoveItemController {
 
     private int index;
 
-    public void search(int value){
-        int size = dbConnection.getInstance().getItemList().size();//get size of arrayList
-        for(int i=0; i<size; i++){
-            System.out.println("in For loop");
-            this.index = i;
-            item itemRef = dbConnection.getInstance().getItemList().get(i);
-            System.out.println(itemRef);
-            if(itemRef.getItemCode() == value){
-                System.out.println(dbConnection.getInstance().getItemList().get(i));
-                txtItemName.setText(itemRef.getItemName());
-                txtItemQty.setText(itemRef.getItemQty()+"");
-                txtItemPrice.setText(itemRef.getItemPrice()+"");
-                break;
-            }else{
-                new Alert(Alert.AlertType.ERROR,"Enter valid Item code..!").show();
-                break;
+    private int searchIndex(int value){
+        int size = dbConnection.getInstance().getItemList().size();
+        for(int i=0; i<size; i++) {
+            item itemObj = dbConnection.getInstance().getItemList().get(i);
+            if(itemObj.getItemCode() == value){
+                return i;
             }
         }
+        return -1;
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
-        int seachNum = Integer.parseInt(txtSearch.getText());
-        search(seachNum);
-
-        //dbConnection.getInstance().getItemList().
+        int index = searchIndex(Integer.parseInt(txtSearch.getText()));
+        if(index == -1){
+            new Alert(Alert.AlertType.ERROR,"Error").show();
+        }else {
+            item itemObj = dbConnection.getInstance().getItemList().get(index);
+            txtItemName.setText(itemObj.getItemName());
+        }
     }
 
     public void btnRemoveOnAction(ActionEvent actionEvent) {
