@@ -34,6 +34,8 @@ public class InventoryRemoveItemController {
         }else {
             item itemObj = dbConnection.getInstance().getItemList().get(index);
             txtItemName.setText(itemObj.getItemName());
+            txtItemQty.setText(itemObj.getItemQty()+"");
+            txtItemPrice.setText(itemObj.getItemPrice()+"");
         }
     }
 
