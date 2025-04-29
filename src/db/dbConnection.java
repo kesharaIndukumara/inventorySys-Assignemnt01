@@ -13,9 +13,9 @@ public class dbConnection {
     private dbConnection(){
         itemList = new ArrayList<>();
         itemList.add(new item(100, "pen", 2, (double) 120.0));
-        itemList.add(new item(101, "pen", 2, (double) 120.0));
-        itemList.add(new item(102, "pen", 2, (double) 120.0));
-        itemList.add(new item(103, "pen", 2, (double) 120.0));
+        itemList.add(new item(101, "pen01", 2, (double) 120.0));
+        itemList.add(new item(102, "pen02", 2, (double) 120.0));
+        itemList.add(new item(103, "pen03", 2, (double) 120.0));
     }
 
     public List<item> getItemList(){

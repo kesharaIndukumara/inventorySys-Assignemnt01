@@ -29,40 +29,33 @@
          </font>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9aa1a8" height="151.0" layoutX="150.0" layoutY="167.0" opacity="0.68" stroke="BLACK" strokeType="INSIDE" width="310.0" />
-      <Label layoutX="225.0" layoutY="190.0" text="Item-Name :">
+      <Label layoutX="189.0" layoutY="190.0" text="Item-Name :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="226.0" layoutY="226.0" text="Item-QTY :">
+      <Label layoutX="190.0" layoutY="232.0" text="Item-QTY :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="227.0" layoutY="260.0" text="Item-Price :">
+      <Label layoutX="191.0" layoutY="270.0" text="Item-Price :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="423.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnRemoveOnAction" prefHeight="34.0" prefWidth="70.0" text="Remove">
+      <Button layoutX="389.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnRemoveOnAction" prefHeight="34.0" prefWidth="70.0" text="Remove">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="lblItemName" layoutX="353.0" layoutY="190.0" text="XXX">
+      <Button layoutX="150.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="70.0" text="Update">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
-      </Label>
-      <Label fx:id="lblItemQty" layoutX="355.0" layoutY="227.0" text="XXX">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblItemPrice" layoutX="356.0" layoutY="261.0" text="XXX">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      </Button>
+      <TextField fx:id="txtItemName" layoutX="305.0" layoutY="189.0" prefHeight="34.0" prefWidth="135.0" />
+      <TextField fx:id="txtItemQty" layoutX="306.0" layoutY="229.0" prefHeight="34.0" prefWidth="135.0" />
+      <TextField fx:id="txtItemPrice" layoutX="307.0" layoutY="269.0" prefHeight="34.0" prefWidth="135.0" />
    </children>
 </AnchorPane>
